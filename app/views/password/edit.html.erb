@@ -1,2 +1,7 @@
-<h1>Password#edit</h1>
-<p>Find me in app/views/password/edit.html.erb</p>
+<h1>Reset your password</h1>
+
+<%= form_for @user, url: reset_path, method: :put do |f| %>
+  <%= f.password_field :password, placeholder: "New password" %>
+  <%= f.password_field :password_confirmation, placeholder: "Password again" %>
+  <%= f.submit "Reset password" %>
+<% end %>

@@ -2,13 +2,32 @@
 <html>
 <head>
   <title>Pardiy</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
   <%= csrf_meta_tags %>
+  
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <style>
+    body {
+      padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    }
+  </style>
 </head>
 <body>
-  <%= flash.inspect %>
-<%= yield %>
+  <% if current_user %>
+    <%= render "layouts/navbar" %>
+  <% end %>
 
+  <div class="container">
+    <%= yield %>
+  </div>
+
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="../assets/js/html5shiv.js"></script>
+  <![endif]-->
+    
+  <%= render "layouts/flash" %>
 </body>
 </html>

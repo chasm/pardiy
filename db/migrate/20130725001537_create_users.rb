@@ -6,7 +6,6 @@ class CreateUsers < ActiveRecord::Migration
       t.date :born_on
       t.string :zip_code
       t.text :bio
-      t.boolean :is_minor, default: true
       t.string :salt
       t.string :fish
       t.string :code

@@ -1,2 +1,9 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<p class="pull-right">
+  <%= link_to "show #{@user.username}", user_path(@user), class: "btn btn-info" %>
+  <%= link_to "add a new user", new_user_path, class: "btn btn-info" %>
+  <%= link_to "list all users", users_path, class: "btn btn-info" %>
+</p>
+
+<h1>Edit <%= @user.username %></h1>
+
+<%= render "form" %>

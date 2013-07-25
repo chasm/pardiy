@@ -1,0 +1,25 @@
+<%= form_for @user do |f| %>
+  <p>
+    <%= f.label :username %>
+    <%= f.text_field :username, placeholder: "Username" %>
+  </p>
+  <p>
+    <%= f.label :email %>
+    <%= f.text_field :email, placeholder: "Email address" %>
+  </p>
+  <p>
+    <%= f.label :born_on %>
+    <%= f.date_field :born_on, placeholder: "Date of birth" %>
+  </p>
+  <p>
+    <%= f.label :zip_code %>
+    <%= f.text_field :zip_code, placeholder: "Zip code" %>
+  </p>
+  <p>
+    <%= f.label :bio %>
+    <%= f.text_area :bio, placeholder: "A brief bio" %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

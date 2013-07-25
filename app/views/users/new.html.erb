@@ -1,2 +1,7 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<p class="pull-right">
+  <%= link_to "list all users", users_path, class: "btn btn-info" %>
+</p>
+
+<h1>Add a new user</h1>
+
+<%= render "form" %>

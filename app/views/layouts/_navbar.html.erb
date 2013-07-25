@@ -1,0 +1,30 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+      </button>
+      <%=
+        link_to_unless_current "ParDIY", root_path, class: "brand" do
+          content_tag :span, "ParDIY", class: "brand"
+        end
+      %>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li>
+            <%=
+              link_to_unless_current "Users", users_path do
+                content_tag :span, "Users", class: "active"
+              end
+            %>
+          </li>
+        </ul>
+        <ul class="nav pull-right">
+          <li>
+            <%= link_to "Log out", logout_url %>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>

@@ -1,7 +1,46 @@
-<h1>Please log in</h1>
-
-<%= form_for :user, url: login_url, method: :post do |f| %>
-  <%= f.text_field :email, placeholder: "Email address" %>
-  <%= f.password_field :password, placeholder: "Password" %>
-  <%= f.submit "Log in" %>
-<% end %>
+<div class="row">
+  <div class="span12">
+    <h1>ParDIY</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="span4">
+    <h3>Sign up!</h3>
+    <p>
+      To sign up for ParDIY, just enter your email address into the
+      log in form, leave the password blank, and click the Log in button.
+    </p>
+    <p>
+      We'll send you an email with a coded link. Follow the link to
+      complete your registration and you're good to go!
+    </p>
+  </div>
+  <div class="span4">
+    <h2>Please log in</h2>
+    <%= form_for :user, url: login_url, method: :post do |f| %>
+      <p>
+        <%= f.label :email %>
+        <%= f.text_field :email, placeholder: "Email address" %>
+      </p>
+      <p>
+        <%= f.label :password %>
+        <%= f.password_field :password, placeholder: "Password" %>
+      </p>
+      <p>
+        <%= f.submit "Log in", class: "btn btn-info" %>
+      </p>
+    <% end %>
+  </div>
+  <div class="span4">
+    <h3>Lost password?</h3>
+    <p>
+      Forgot your password? Just enter your email address in the logs in
+      form and leave the password blank. Then click the Log in button.
+    </p>
+    <p>
+      We'll send you an email with a coded link. Follow that link to reset
+      your password and you're all set.
+    </p>
+  </div>
+</div>
+    

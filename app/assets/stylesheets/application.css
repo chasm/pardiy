@@ -8,6 +8,31 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require bootstrap
+ *= require bootstrap-responsive
+ *= require datepicker
  *= require_self
- *= require_tree .
  */
+
+.unknown { color: blue; }
+.yes { color: green; font-weight: strong; text-transform: uppercase; }
+.no { color: red;, font-weight: strong; }
+
+dt { color: blue; }
+
+.nav > li > span {
+  display: block;
+}
+
+.navbar .nav > li > span {
+  float: none;
+  padding: 10px 15px 10px;
+  color: #777777;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #ffffff;
+}
+
+.navbar-inverse .nav > li > span {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
