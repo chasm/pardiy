@@ -1,0 +1,11 @@
+<h1>Please register</h1>
+
+<%= form_for @user, url: register_path, method: :post do |f| %>
+  <p><%= @user.email %></p>
+  <p><%= f.password_field :password, placeholder: "Password" %></p>
+  <p><%= f.password_field :password_confirmation, placeholder: "Password again" %></p>
+  <p><%= f.date_field :born_on, placeholder: "Date of birth" %></p>
+  <p><%= f.text_field :zip_code, placeholder: "Zip code" %></p>
+  <p><%= f.text_area :bio, placeholder: "A brief bio" %></p>
+  <p><%= f.submit "Register" %></p>
+<% end %>
